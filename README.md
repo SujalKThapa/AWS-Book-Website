@@ -23,3 +23,5 @@ ECS (Elastic Container Service): ECS is a managed container orchestration servic
 
 Lambda: Lambda is a serverless compute service that allows users to run code without managing servers. Users upload their code, and Lambda handles scaling and infrastructure management automatically. When a Lambda function is invoked, users receive an ARN (Amazon Resource Name) that uniquely identifies the function. Lambda is commonly used with API Gateway to create serverless REST APIs, enabling infinitely scalable endpoints. Lambda prioritizes simplicity, offering a streamlined development experience without the burden of managing infrastructure.
 
+# CloudFront
+AWS CloudFront is an Amazon branded content delivery network, CloudFront can be used to improve web hosting by providing the AWS Client with Caching, improved global reach and routing efficiency. CloudFront is often used alongside S3 Object Storage buckets to provide reliable, cheap and efficient static web hosting. Additionally, CloudFront comes with AWS Shield Advanced pre-installed which adds an extra layer of security to the whole architecture, especially against DDoS attacks.

@@ -5,7 +5,8 @@ Helpful YouTube videos:
 
 1) EC2 VS ECS VS Lambda (Serverless)
    https://www.youtube.com/watch?v=-L6g9J9_zB8
-
+2) GoCloudCarreers AWS explainer videos
+   https://www.youtube.com/watch?v=FCtX3-4W8_U&t=53s
 
 ### Different types of EC2 Instances
 ![image](https://github.com/SujalKThapa/Cloud-Resources/assets/136220535/defa2235-eb91-4801-9ba6-c5b27d13c828)

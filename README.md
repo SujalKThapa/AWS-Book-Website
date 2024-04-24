@@ -68,3 +68,8 @@ Fully-Managed ML-Service to build apps with real-time personalized reccomendatio
 
 ### Amazon Textract
 Automatically extracts text, handwriting and data from any scanned documents using AI and ML.
+
+# To do Topics
+1) Clusters
+2) SR-IOV
+3) Lambda@Edge

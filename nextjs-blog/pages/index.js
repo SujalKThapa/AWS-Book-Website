@@ -13,6 +13,27 @@ export default function Home() {
         <h1 className={styles.title}>
           Get Flash notes, Tips and Tricks on 100+ <b className={styles.boldAws}>AWS</b> Topics
         </h1>
+        <div className={styles.thinPara1}>My curated All-In-One AWS study document, just a single E-Mail away.</div>
+        <div className={styles.emailContainer}>
+          <input 
+            type="email" 
+            placeholder="Enter email here to receive the full document" 
+            className={styles.emailInput} 
+          />
+          <button className={styles.sendButton}>Send</button>
+        </div>
+
+        <div className={styles.SampleDoc}>
+          <div className={styles.thinPara}>Not sure about the full document?</div>
+          <button className={styles.downloadButton}>
+            <div><img src='https://i.postimg.cc/kgTDsD5b/download-button-on-transparent-background-free-png.webp' alt="Download" /></div>
+            Get a Free PDF Sample
+          </button>
+        </div>
+
+        <div className={styles.finalSection}>
+          <a href=''>How this site works</a>
+        </div>
       </main>
 
       <style jsx>{`
@@ -24,7 +45,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-        
+
         footer {
           width: 100%;
           height: 100px;

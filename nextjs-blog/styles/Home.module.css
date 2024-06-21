@@ -1,5 +1,5 @@
 .container {
-  background-color: rgb(20, 20, 20);
+  background-color: #11161f;
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -8,12 +8,128 @@
   align-items: center;
 }
 
+
+
+.finalSection{
+  color: whitesmoke;
+  margin-top: 2rem;
+}
+
+
+.finalSection a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.finalSection a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.finalSection a:hover {
+  text-decoration: underline;
+}
+
+.finalSection a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navButton:hover {
+  color: #1e90ff;
+}
+
+.emailContainer {
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+.sendButton {
+  background-color: rgb(25, 221, 123);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.sendButton:hover {
+  background-color: springgreen;
+}
+
+.thinPara {
+  margin-left: 0.75rem;
+  color: whitesmoke;
+}
+
+.thinPara1 {
+  margin-top: 5cqmax;
+  margin-left: 0.75rem;
+  color: whitesmoke;
+}
+
+.SampleDoc {
+  margin-top: 6rem;
+  color: whitesmoke;
+  font-weight: 300;
+}
+
+.downloadButton {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(25, 221, 123);
+  color: black;
+  padding: 12px 20px;
+  max-width: 16rem;
+  max-height: 6rem;
+  border: rgb(20, 20, 20);
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background-color: springgreen;
+}
+
+.downloadButton img {
+  max-width: 4rem;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
 }
 
-.boldAws{
+.boldAws {
   color: rgb(255, 132, 0);
 }
 
@@ -22,18 +138,11 @@
   line-height: 1.15;
   font-size: 3rem;
   color: white;
-}
-
-.title {
-  text-align: center;
-}
-
-.title,
-.description {
   text-align: center;
 }
 
 .description {
+  text-align: center;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -43,7 +152,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
   max-width: 800px;
   margin-top: 3rem;
 }
@@ -57,9 +165,7 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover,

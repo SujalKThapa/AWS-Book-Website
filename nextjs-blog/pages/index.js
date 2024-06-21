@@ -9,9 +9,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
+      <header className={styles.header2}>
+      <img src="https://i.postimg.cc/g2XCJk7W/1mc0KI.jpg"/>
+      </header>
+
       <main>
         <h1 className={styles.title}>
-          Get Flash notes, Tips and Tricks on 100+ <b className={styles.boldAws}>AWS</b> Topics
+          Get Flash Notes, Tips and Tricks on 100+ <b className={styles.boldAws}>AWS</b> Topics
         </h1>
         <div className={styles.thinPara1}>My curated All-In-One AWS study document, just a single E-Mail away.</div>
         <div className={styles.emailContainer}>
@@ -22,6 +27,12 @@ export default function Home() {
           />
           <button className={styles.sendButton}>Send</button>
         </div>
+
+        
+      <header className={styles.header}>
+        <div className={styles.headerOut}>Site Views: &nbsp;</div>
+        <div className={styles.headerIn}>1000</div>
+      </header>
 
         <div className={styles.SampleDoc}>
           <div className={styles.thinPara}>Not sure about the full document?</div>

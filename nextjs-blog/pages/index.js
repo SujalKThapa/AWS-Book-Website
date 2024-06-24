@@ -36,10 +36,12 @@ export default function Home() {
 
         <div className={styles.SampleDoc}>
           <div className={styles.thinPara}>Not sure about the full document?</div>
+          <a href="/organized.pdf" target="_blank" rel="noopener noreferrer" className={styles.anew}>
           <button className={styles.downloadButton}>
             <div><img src='https://i.postimg.cc/kgTDsD5b/download-button-on-transparent-background-free-png.webp' alt="Download" /></div>
             Get a Free PDF Sample
           </button>
+          </a>
         </div>
 
         <div className={styles.finalSection}>

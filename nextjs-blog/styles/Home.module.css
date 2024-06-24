@@ -122,6 +122,10 @@
   background-color: springgreen;
 }
 
+.anew{
+  text-decoration: none;
+}
+
 .thinPara {
   margin-left: 0.75rem;
   color: whitesmoke;
@@ -289,6 +293,7 @@
   font-weight: 600;
   font-size: 18px;
 }
+
 
 
 .emailInput {

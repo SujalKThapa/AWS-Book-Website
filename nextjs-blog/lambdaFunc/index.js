@@ -3,16 +3,20 @@ const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event) => {
-  const { toEmail, subject, text, pdfPath } = event;
+  const { toEmail, subject, text } = event;
 
-  const yahooUser = process.env.YAHOO_EMAIL;
-  const yahooPass = process.env.YAHOO_PASSWORD;
+  const zohoUser = process.env.ZOHO_EMAIL;
+  const zohoPass = process.env.ZOHO_PASSWORD;
+  const smtpHost = process.env.ZOHO_SMTP_HOST;
+  const smtpPort = parseInt(process.env.ZOHO_SMTP_PORT);
 
   let transporter = nodemailer.createTransport({
-    service: 'yahoo',
+    host: smtpHost,
+    port: smtpPort,
+    secure: false, // true for 465, false for other ports
     auth: {
-      user: yahooUser,
-      pass: yahooPass,
+      user: zohoUser,
+      pass: zohoPass,
     },
   });
 
@@ -21,7 +25,7 @@ exports.handler = async (event) => {
 
   // Setup email options
   let mailOptions = {
-    from: yahooUser,
+    from: zohoUser,
     to: toEmail,
     subject: subject,
     text: text,

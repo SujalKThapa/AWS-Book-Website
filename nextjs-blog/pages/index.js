@@ -7,16 +7,14 @@ export default function Home() {
   const [message, setMessage] = useState('Here is your PDF document.');
   const [subject, setSubject] = useState('Your AWS Document');
 
-  const handleSend = async () => {
+  const handleSend = async (email1) => {
     try {
-      console.log(JSON.stringify({ toEmail: email, subject, text: message }));
       const response = await fetch('https://obzyzblvsyacryqnviixt3qgma0dllld.lambda-url.us-east-1.on.aws', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ toEmail: email, subject, text: message }),
+        body: JSON.stringify({ toEmail: email1, subject: 'Your AWS Document', text: 'Here is your PDF document.' }),
       });
 
       if (response.ok) {
@@ -57,7 +55,7 @@ export default function Home() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className={styles.sendButton} onClick={handleSend}>
+          <button className={styles.sendButton} onClick={() => handleSend(email)}>
             Send
           </button>
         </div>

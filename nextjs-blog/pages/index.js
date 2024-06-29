@@ -5,19 +5,28 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('Here is your PDF document.');
+  const [subject, setSubject] = useState('Your AWS Document');
 
   const handleSend = async () => {
-    const response = await fetch('https://your-api-id.execute-api.your-region.amazonaws.com/prod/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, message }),
-    });
+    try {
+      console.log(JSON.stringify({ toEmail: email, subject, text: message }));
+      const response = await fetch('https://obzyzblvsyacryqnviixt3qgma0dllld.lambda-url.us-east-1.on.aws', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ toEmail: email, subject, text: message }),
+      });
 
-    if (response.ok) {
-      alert('Email sent successfully');
-    } else {
+      if (response.ok) {
+        alert('Email sent successfully');
+      } else {
+        const errorText = await response.text();
+        alert(`Error sending email: ${errorText}`);
+      }
+    } catch (error) {
+      console.error('Error:', error);
       alert('Error sending email');
     }
   };

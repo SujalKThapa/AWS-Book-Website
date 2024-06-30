@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Swal from 'sweetalert2';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -9,7 +10,16 @@ export default function Home() {
 
   const handleSend = async (email1) => {
     try {
-      const response = await fetch('https://obzyzblvsyacryqnviixt3qgma0dllld.lambda-url.us-east-1.on.aws', {
+      Swal.fire({
+        title: 'Sending...',
+        text: 'Please wait while we send your email.',
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        }
+      });
+
+      const response = await fetch('https://obzyzblvsyacryqnviixt3qgma0dllld.lambda-url.us-east-1.on.aws/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,14 +28,26 @@ export default function Home() {
       });
 
       if (response.ok) {
-        alert('Email sent successfully');
+        Swal.fire({
+          title: "Email sent!",
+          text: "PDF Document was sent to your provided email.",
+          icon: "success"
+        });
       } else {
         const errorText = await response.text();
-        alert(`Error sending email: ${errorText}`);
+        Swal.fire({
+          title: "Error",
+          text: `Error sending email: ${errorText}`,
+          icon: "error"
+        });
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Error sending email');
+      Swal.fire({
+        title: "Error",
+        text: 'Error sending email',
+        icon: "error"
+      });
     }
   };
 

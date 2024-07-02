@@ -1,0 +1,39 @@
+{
+    "CallerReference": "unique-string",
+    "Comment": "My CloudFront distribution",
+    "Origins": {
+      "Items": [
+        {
+          "Id": "articuano2005-awsnotes-bucketman987",
+          "DomainName": "articuano2005-awsnotes-bucketman987.s3.us-east-1.amazonaws.com",
+          "S3OriginConfig": {
+            "OriginAccessIdentity": ""
+          }
+        }
+      ],
+      "Quantity": 1
+    },
+    "DefaultCacheBehavior": {
+      "TargetOriginId": "articuano2005-awsnotes-bucketman987",
+      "ViewerProtocolPolicy": "redirect-to-https",
+      "AllowedMethods": {
+        "Quantity": 2,
+        "Items": ["HEAD", "GET"],
+        "CachedMethods": {
+          "Quantity": 2,
+          "Items": ["HEAD", "GET"]
+        }
+      },
+      "ForwardedValues": {
+        "QueryString": false,
+        "Cookies": {
+          "Forward": "none"
+        }
+      },
+      "MinTTL": 0,
+      "DefaultTTL": 0,
+      "MaxTTL": 0
+    },
+    "Enabled": true
+  }
+  

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Swal from 'sweetalert2';
@@ -7,6 +7,26 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('Here is your PDF document.');
   const [subject, setSubject] = useState('Your AWS Document');
+  const [SiteViews, setSiteViews] = useState(0);
+
+
+  useEffect(() => {
+    const fetchService = async() => {
+      try{
+        const response = await fetch('api_endpoint');
+        const data = await response.json();
+        setSiteViews(data.views);
+      }
+      catch(error){
+        console.error('Error fetching site views:', error);
+      }
+    };
+
+    fetchSiteViews();
+  },[]);
+
+
+
 
   const handleSend = async (email1) => {
     try {
@@ -84,7 +104,7 @@ export default function Home() {
 
         <header className={styles.header}>
           <div className={styles.headerOut}>Site Views: &nbsp;</div>
-          <div className={styles.headerIn}>1000</div>
+          <div className={styles.headerIn}>{SiteViews}</div>
         </header>
 
         <div className={styles.SampleDoc}>

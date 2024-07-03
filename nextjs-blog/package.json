@@ -6,8 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "aws-sdk": "^2.1648.0",
+    "aws-sdk": "^2.1652.0",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "form-data": "^4.0.0",
     "next": "latest",
     "nodemailer": "^6.9.14",

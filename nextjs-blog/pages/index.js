@@ -9,21 +9,23 @@ export default function Home() {
   const [subject, setSubject] = useState('Your AWS Document');
   const [SiteViews, setSiteViews] = useState(0);
 
-
+  
   useEffect(() => {
-    const fetchService = async() => {
-      try{
-        const response = await fetch('api_endpoint');
+    const fetchService = async () => {
+      try {
+        const response = await fetch('https://7xcdjhdz32.execute-api.us-east-1.amazonaws.com/apiStage/totalViewCount');
         const data = await response.json();
-        setSiteViews(data.views);
-      }
-      catch(error){
+        const data1 = JSON.parse(data.body);
+        console.log('Response from API:', data1);
+        setSiteViews(data1.totalViews); // Log the entire response object
+      } catch (error) {
         console.error('Error fetching site views:', error);
       }
     };
-
-    fetchSiteViews();
-  },[]);
+  
+    fetchService();
+  }, []);
+  
 
 
 
@@ -79,7 +81,7 @@ export default function Home() {
       </Head>
 
       <header className={styles.header2}>
-        <img src="https://i.postimg.cc/g2XCJk7W/1mc0KI.jpg" />
+        <img src="https://i.postimg.cc/BQmmtGN4/1mc0KI.png" />
       </header>
 
       <main>

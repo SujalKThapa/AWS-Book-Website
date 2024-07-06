@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link'; // Import the Link component
 import styles from '../styles/Home.module.css';
 import Swal from 'sweetalert2';
 
@@ -9,7 +10,6 @@ export default function Home() {
   const [subject, setSubject] = useState('Your AWS Document');
   const [SiteViews, setSiteViews] = useState(0);
 
-  
   useEffect(() => {
     const fetchService = async () => {
       try {
@@ -22,13 +22,9 @@ export default function Home() {
         console.error('Error fetching site views:', error);
       }
     };
-  
+
     fetchService();
   }, []);
-  
-
-
-
 
   const handleSend = async (email1) => {
     try {
@@ -76,8 +72,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>AWS Flash Notes by Sujal</title>
+        <link rel="icon" href="/myicon.ico" />
       </Head>
 
       <header className={styles.header2}>
@@ -125,7 +121,9 @@ export default function Home() {
         </div>
 
         <div className={styles.finalSection}>
-          <a href="">How this site works</a>
+          <Link href="/how-this-site-works">
+            How this site works
+          </Link>
         </div>
       </main>
 

@@ -37,19 +37,28 @@ exports.handler = async (event) => {
       },
     ],
   };
-
   try {
     // Send email
     let info = await transporter.sendMail(mailOptions);
     console.log('Email sent: ' + info.response);
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Allow all origins or specify specific origins
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET', // Allowed methods
+      },
       body: JSON.stringify('Email sent successfully!'),
     };
   } catch (error) {
     console.error('Error sending email:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Allow all origins or specify specific origins
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET', // Allowed methods
+      },
       body: JSON.stringify('Failed to send email.'),
     };
   }

@@ -48,6 +48,12 @@
   margin-top: -10px;
 }
 
+.normalWhiteText{
+  margin-left: 15rem;
+  margin-right: 15rem;
+  color: whitesmoke;
+}
+
 
 .finalSection{
   color: whitesmoke;
@@ -141,6 +147,15 @@
   margin-top: 6rem;
   color: whitesmoke;
   font-weight: 300;
+}
+
+
+.title3 {
+  max-width: 80%;
+  line-height: 1.15;
+  font-size: 1.4rem;
+  color: white;
+  text-align: left;
 }
 
 .downloadButton {
@@ -253,6 +268,13 @@
   font-size: 2rem;
   color: white;
   text-align: center;
+}
+
+
+.normalWhiteText{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: whitesmoke;
 }
 
 

@@ -1,7 +1,8 @@
-# Cloud-Resources
+# The Flash Guide to AWS
 
-A website made using Next.js and AWS for the distribution of my book, The AWS Flash Guide.
+A website made using Next.js and AWS for the distribution of my book, The AWS Flash Guide. The website sends a copy of the book to the user via email, provides a readily available sample of the book for direct download, and keeps track of the number of people who have visited the site. 
 
+Live demo @ https://d3svokvclh2aw.cloudfront.net/
 
 <br/>
 

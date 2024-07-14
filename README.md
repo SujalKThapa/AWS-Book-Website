@@ -2,7 +2,18 @@
 
 A website made using Next.js and AWS for the distribution of my book, The AWS Flash Guide. The website sends a copy of the book to the user via email, provides a readily available sample of the book for direct download, and keeps track of the number of people who have visited the site. 
 
-Live demo @ https://d3svokvclh2aw.cloudfront.net/
+<b> Website link: [flashguide.info](http://awsflashguide.info/) </b>
+<br/><br/>
+
+
+ ## About the book
+A concise, quick, no-nonsense guide to AWS. Useful for both veterans with years of experience and beginners just starting their AWS journey. Provides the reader with:
+
+ - <b>Concise Summaries:</b> Key AWS services and concepts are broken down into manageable sections, allowing for quick review and comprehension.
+ - <b>Flashcard-Like Format:</b> A compilation of 100+ topics presented in an easy-to-digest format, from the basics of Cloud Computing to niche AWS services.
+ - <b>Visual Aids:</b> Carefully selected infographics and diagrams from public sources enhance your understanding and retention of information.
+   
+*(Also available on [Amazon Kindle](https://www.amazon.com/dp/B0D9CXF535))*
 
 <br/>
 
